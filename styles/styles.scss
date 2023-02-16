@@ -1,0 +1,72 @@
+body,
+html {
+  margin: 0;
+}
+
+@mixin nav-style {
+  width: 200px;
+  color: black;
+  font-size: 14px;
+  font-family: Roboto, arial, sans-serif;
+  text-decoration: none;
+}
+
+.top-nav-container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+
+  .left-nav-wrapper {
+  }
+  .leftright-links {
+    display: flex;
+    @include nav-style();
+  }
+  .rightright-links {
+    @include nav-style();
+  }
+  .right-links-wrapper {
+    display: flex;
+    justify-content: space-around;
+    @include nav-style();
+  }
+}
+
+.main-grid-center {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  background-color: #2196f3;
+  padding: 10px;
+
+  .div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  .google-header {
+    grid-column: 1 / span 6;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+// left off on the Google logo
+
+.google-search-container {
+  grid-column: 2 / span 4;
+  text-align: center;
+  margin: auto;
+  width: 400px;
+  max-height: 100px;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 1px 0.2px 0.2px 1px rgb(197, 197, 197, 197);
+  border-radius: 25px;
+  input {
+    border: white;
+    width: 320px;
+  }
+}
